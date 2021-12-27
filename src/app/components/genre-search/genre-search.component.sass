@@ -8,14 +8,12 @@
 
 input
   border: none
-  border-bottom:  1px solid #3C3C43
+  border-bottom:  1px solid $c-secondary
   width: 375px
-  font-style: normal
-  font-weight: normal
-  font-size: 17px
-  line-height: 22px
+  @include normal-style-weight
+  @include primary-text
   letter-spacing: -0.408px
-  color: #3C3C43
+  color: $c-secondary
   margin-bottom: 20px
 
 label

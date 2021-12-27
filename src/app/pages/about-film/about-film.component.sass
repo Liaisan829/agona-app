@@ -1,3 +1,5 @@
+@import "../../styles/mixins.sass"
+
 .mainCont
   max-width: 450px
   width: 100%
@@ -39,11 +41,9 @@
   input
     padding: 14px 0
     border: none
-    border-bottom: 1px solid #000000
-    font-style: normal
-    font-weight: normal
-    font-size: 17px
-    line-height: 22px
+    border-bottom: 1px solid $c-secondary
+    @include normal-style-weight
+    @include primary-text
 
 .notFound
   display: flex
@@ -51,12 +51,10 @@
 
   p
     margin: 0
-    font-style: normal
-    font-weight: normal
-    font-size: 17px
-    line-height: 22px
+    @include normal-style-weight
+    @include primary-text
     letter-spacing: -0.408px
-    color: #3C3C43
+    color: $c-secondary
     padding-bottom: 10px
 
   a
@@ -79,14 +77,12 @@
 
   input
     border: none
-    border-bottom: 1px solid #3C3C43
+    border-bottom: 1px solid $c-secondary
     width: 375px
-    font-style: normal
-    font-weight: normal
-    font-size: 17px
-    line-height: 22px
+    @include normal-style-weight
+    @include primary-text
     letter-spacing: -0.408px
-    color: #3C3C43
+    color: $c-secondary
     margin-bottom: 20px
 
   label
