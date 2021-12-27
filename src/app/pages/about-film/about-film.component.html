@@ -5,8 +5,9 @@
               (onChanged)="onToggleChange($event)"></app-toggle>
   <ng-container *ngIf="selected === 0; else manually">
     <form [formGroup]="form">
-      <!--    TODO сделать переключение по тогл посмотреть у оли-->
-      <!--    TODO сделать страницу вручную (жанры есть у рустема)-->
+      <!--    TODO стилизовать страницу вручную -->
+      <!--    TODO модалка с жанрами не открывается при их поиске -->
+      <!--    TODO попробовать переход по постеру -->
 
       <div class="inputCont">
         <label>Название</label>
@@ -21,7 +22,6 @@
         <ng-container *ngIf="(films$ | async)!.length > 0 || filmNotFound; else notFound">
           <app-film (clickedOnPoster)="onPosterClick($event)"></app-film>
         </ng-container>
-
       </div>
     </form>
   </ng-container>
@@ -38,23 +38,28 @@
 </ng-template>
 
 <ng-template #manually>
+
   <div class="manualSearch">
+
     <label>Название</label>
     <input class="search" type="search" placeholder="Например, Титаник">
+
     <label>Год</label>
     <input class="search" type="search" placeholder="Укажите год выхода фильма">
+
     <label>Описание</label>
     <input class="search" type="search" placeholder="Напишите пару слов о сюжете">
+
     <app-genre-search formControlName="genre"></app-genre-search>
-    <div class="poster">
-      <label>Постер</label>
-      <img src="assets/poster.svg" alt="poster">
-    </div>
-    <!--    сделать кнопку отдельной компонентой-->
-    <button class="saveButton">
+
+    <label>Постер</label>
+    <img src="assets/poster.svg" alt="poster">
+
+    <app-button class="saveButton">
       <img src="/assets/plus.svg" alt="plus">
       Сохранить
-    </button>
+    </app-button>
+
   </div>
 </ng-template>
 

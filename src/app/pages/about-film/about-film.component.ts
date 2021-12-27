@@ -31,6 +31,7 @@ export class AboutFilmComponent {
       )
       .subscribe(res => {
         this.filmService.searchFilm(res);
+        this.filmNotFound = !Boolean(res);
       })
   }
 

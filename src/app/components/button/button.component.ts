@@ -9,8 +9,7 @@ import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 })
 export class ButtonComponent {
 
-  @Input() theme: 'PRIMARY' | 'SECONDARY' = 'PRIMARY';//по дефолту ставим primary
+  @Input() theme: 'PRIMARY' | 'SECONDARY' = 'PRIMARY';
   @Input() type: 'submit' | 'button' | 'reset' = 'button';
-
 
 }

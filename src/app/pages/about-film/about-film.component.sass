@@ -18,32 +18,13 @@
     margin-top: 82px
     margin-bottom: 35px
 
-.film
-  display: flex
-  align-items: start
-
-  &:not(:last-child)
-    margin-bottom: 16px
-
-  img
-    margin-right: 16px
-    width: 64px
-    height: 81px
-
-  h2
-    margin: 0
-    padding-bottom: 10px
-
-  &--container
-    display: flex
-    flex-direction: column
 
 .inputCont
   display: flex
   flex-direction: column
   margin-top: 42px
   margin-bottom: 20px
-
+  width: 375px
 
   label
     margin-bottom: 14px
@@ -90,3 +71,36 @@
     height: 81px
     background: rgba(0, 0, 0, 0.04)
     margin-right: 18px
+
+.manualSearch
+  display: flex
+  flex-direction: column
+  align-items: start
+
+  input
+    border: none
+    border-bottom: 1px solid #3C3C43
+    width: 375px
+    font-style: normal
+    font-weight: normal
+    font-size: 17px
+    line-height: 22px
+    letter-spacing: -0.408px
+    color: #3C3C43
+    margin-bottom: 20px
+
+  label
+    font-family: SF Pro Display, sans-serif
+    font-style: normal
+    font-weight: bold
+    font-size: 22px
+    line-height: 28px
+    letter-spacing: 0.8px
+    color: #000000
+    margin-bottom: 15px
+
+.saveButton
+  display: flex
+  align-items: center
+  margin: 42px auto
+
